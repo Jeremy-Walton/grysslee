@@ -5,10 +5,17 @@ body {
   --white: #ffffff;
   --black: #000000;
   --blue: #255F96;
+  --red: #FF0000;
+  --purple: #8c45be;
+  --yellow: #FFFC00;
 
   --header-height: 40px;
 
   font-family: 'Product Sans';
+}
+
+.text-black {
+  color: var(--black);
 }
 
 header {
@@ -35,4 +42,73 @@ header {
 .container {
   margin: auto;
   padding: 16px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+
+.category {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category--youtube {
+  background-color: var(--red);
+  /* background-image: url('/assets/youtube.jpg'); */
+}
+
+.category--podcast {
+  background-color: var(--blue);
+  /* background-image: url('/assets/podcast.jpg'); */
+}
+
+.category--instagram {
+  background-color: var(--purple);
+}
+
+.category--snapchat {
+  background-color: var(--yellow);
+}
+
+.category__link {
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+  flex: 0 0 50%;
+  /* min-width: 300px; */
+}
+
+@media screen and (max-width: 600px) {
+  .category__link {
+    flex: 0 0 100%;
+  }
+}
+
+.category__link h1 {
+  z-index: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .category__link h1 {
+    font-size: 1rem;
+  }
+}
+
+.category__link--overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
