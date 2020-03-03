@@ -6,7 +6,7 @@ body {
   --black: #000000;
   --blue: #255F96;
   --red: #FF0000;
-  --purple: #8c45be;
+  --purple: #d82a70;
   --yellow: #FFFC00;
 
   --header-height: 40px;
@@ -47,7 +47,7 @@ header {
 .categories {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  height: calc(100vh - 56px);
 }
 
 
@@ -65,12 +65,10 @@ header {
 
 .category--youtube {
   background-color: var(--red);
-  /* background-image: url('/assets/youtube.jpg'); */
 }
 
 .category--podcast {
   background-color: var(--blue);
-  /* background-image: url('/assets/podcast.jpg'); */
 }
 
 .category--instagram {
@@ -85,8 +83,8 @@ header {
   text-decoration: none;
   color: var(--white);
   text-transform: uppercase;
-  flex: 0 0 50%;
-  /* min-width: 300px; */
+  flex-grow: 1;
+  min-height: 200px;
 }
 
 @media screen and (max-width: 600px) {
